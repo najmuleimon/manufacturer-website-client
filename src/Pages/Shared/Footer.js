@@ -7,26 +7,26 @@ const Footer = () => {
         <footer className="xl:px-24 bg-neutral text-neutral-content">
             <div className="footer p-10 py-20">
                 <div>
-                    <span className="footer-title">Services</span>
-                    <a className="link link-hover">Branding</a>
-                    <a className="link link-hover">Design</a>
-                    <a className="link link-hover">Marketing</a>
-                    <a className="link link-hover">Advertisement</a>
+                    <span className="footer-title">Products</span>
+                    <button className="link link-hover">Electronics</button>
+                    <button className="link link-hover">Tools</button>
+                    <button className="link link-hover">Parts</button>
+                    <button className="link link-hover">Others</button>
                 </div>
                 <div>
-                    <span className="footer-title">Oral Health</span>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <span className="footer-title">Information</span>
+                    <button className="link link-hover">About Us</button>
+                    <button className="link link-hover">Blogs</button>
+                    <button className="link link-hover">Reviews</button>
+                    <button className="link link-hover">Contact</button>
                 </div>
                 <div>
                     <span className="footer-title">Our Address</span>
-                    <a className="link link-hover">New York - 101010 Hudson</a>
+                    <button className="link link-hover">79/2 New Vally, New York</button>
                 </div>
             </div>
 
-            <div className="footer footer-center p-4 text-base-content">
+            <div className="footer footer-center p-4 text-base-100">
                 <p>Copyright © {year} - All right reserve</p>
             </div>
         </footer>
