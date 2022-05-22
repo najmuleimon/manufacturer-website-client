@@ -11,7 +11,10 @@ const Tools = () => {
     }, [])
     return (
         <div className='container max-w-7xl'>
-            <h2 className='text-4xl font-bold text-center mb-10'>Tools</h2>
+            <div className='mb-10'>
+                <h4 className="text-4xl text-primary font-bold">Tools</h4>
+                <h2 className='text-xl font-normal'>Electronic Tools</h2>
+            </div>
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     tools.map(tool => <Tool key={tool._id} tool={tool} />).slice(0, 6)
