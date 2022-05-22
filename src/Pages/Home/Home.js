@@ -5,6 +5,7 @@ import BusinessSummary from './BusinessSummary';
 import Reviews from './Reviews';
 import Footer from '../Shared/Footer';
 import Categories from './Categories';
+import Highlight from './Highlight';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <Tools />
             <BusinessSummary />
             <Categories />
+            <Highlight />
             <Reviews />
             <Footer />
         </>
