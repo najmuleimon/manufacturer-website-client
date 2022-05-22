@@ -29,12 +29,12 @@ const Reviews = () => {
         },
     ];
     return (
-        <section className='my-28 px-5 xl:px-14'>
+        <section className='container max-w-7xl'>
             <div className='mb-10 text-center'>
                 <h4 className="text-4xl text-primary font-bold">Customer Reviews</h4>
                 <h2 className='text-xl font-normal'>What our customers say?</h2>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     reviews.map(review => <Review key={review._id} review={review}></Review>)
                 }

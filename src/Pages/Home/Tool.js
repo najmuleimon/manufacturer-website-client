@@ -3,7 +3,7 @@ import React from 'react';
 const Tool = ({ tool }) => {
     const { name, image, description, quantity, available, price } = tool;
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 shadow-xl">
             <figure><img src={image} alt="tools" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{name}</h2>

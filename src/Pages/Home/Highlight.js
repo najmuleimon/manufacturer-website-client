@@ -3,7 +3,7 @@ import bg from '../../assets/images/bg.jpg';
 
 const Highlight = () => {
     return (
-        <div className="container max-w-7xl">
+        <section className="container max-w-7xl">
             <div className="hero" style={{ background: `url(${bg})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
                 <div className="hero-overlay bg-opacity-40"></div>
                 <div className="hero-content text-center text-neutral-content py-16">
@@ -13,7 +13,7 @@ const Highlight = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

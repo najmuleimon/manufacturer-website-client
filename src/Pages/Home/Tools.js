@@ -10,7 +10,7 @@ const Tools = () => {
             .then(data => setTools(data))
     }, [])
     return (
-        <div className='container max-w-7xl'>
+        <section className='container max-w-7xl'>
             <div className='mb-10 text-center'>
                 <h4 className="text-4xl text-primary font-bold">Tools</h4>
                 <h2 className='text-xl font-normal'>Electronic Tools</h2>
@@ -20,7 +20,7 @@ const Tools = () => {
                     tools.map(tool => <Tool key={tool._id} tool={tool} />).slice(0, 6)
                 }
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -7,7 +7,7 @@ import { RiToolsFill } from 'react-icons/ri';
 
 const BusinessSummary = () => {
     return (
-        <div style={{ background: `url(${business})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }}>
+        <section style={{ background: `url(${business})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }}>
             <div className="container max-w-7xl">
                 <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-20'>
                     <div className="text-white text-center">
@@ -32,7 +32,7 @@ const BusinessSummary = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
