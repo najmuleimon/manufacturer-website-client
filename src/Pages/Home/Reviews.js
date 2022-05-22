@@ -30,7 +30,7 @@ const Reviews = () => {
     ];
     return (
         <section className='my-28 px-5 xl:px-14'>
-            <div className='mb-10'>
+            <div className='mb-10 text-center'>
                 <h4 className="text-4xl text-primary font-bold">Customer Reviews</h4>
                 <h2 className='text-xl font-normal'>What our customers say?</h2>
             </div>

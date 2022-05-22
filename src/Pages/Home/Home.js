@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Tools from './Tools';
 import BusinessSummary from './BusinessSummary';
 import Reviews from './Reviews';
+import Footer from '../Shared/Footer';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <Tools />
             <BusinessSummary />
             <Reviews />
+            <Footer />
         </>
     );
 };

@@ -11,7 +11,7 @@ const Tools = () => {
     }, [])
     return (
         <div className='container max-w-7xl'>
-            <div className='mb-10'>
+            <div className='mb-10 text-center'>
                 <h4 className="text-4xl text-primary font-bold">Tools</h4>
                 <h2 className='text-xl font-normal'>Electronic Tools</h2>
             </div>
