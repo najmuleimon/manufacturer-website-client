@@ -4,9 +4,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import auth from '../../firebase.init';
+import Loader from './Loader';
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
+    if (loading) {
+        <Loader />
+    }
 
     const logout = () => {
         signOut(auth);
@@ -22,7 +26,6 @@ const Navbar = () => {
                         <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 space-y-1">
                             <li><NavLink to='/'>Home</NavLink></li>
                             <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
-                            <li><NavLink to='/purchase'>Purchase</NavLink></li>
                             <li><NavLink to='/blogs'>Blogs</NavLink></li>
                         </ul>
                     </div>
@@ -34,7 +37,6 @@ const Navbar = () => {
                     <ul className="menu menu-horizontal p-0 space-x-1">
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
-                        <li><NavLink to='/purchase'>Purchase</NavLink></li>
                         <li><NavLink to='/blogs'>Blogs</NavLink></li>
                     </ul>
                 </div>

@@ -23,7 +23,7 @@ function App() {
             <Dashboard />
           </PrivateRoute>
         } />
-        <Route path='purchase' element={<Purchase />} />
+        <Route path='purchase/:id' element={<Purchase />} />
         <Route path='blogs' element={<Blogs />} />
         <Route path='*' element={<NotFound />} />
       </Routes>

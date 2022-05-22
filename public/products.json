@@ -1,263 +1,234 @@
 [
   {
-    "_id": 1,
+    "_id": "628a55afdf146189afc5cc6c",
     "name": "Cordless Drill Professional Combo Drill And Screwdriver",
     "image": "https://i.ibb.co/DW8bnJY/1.jpg",
     "description": "Cordless Drill Professional Combo Drill And Screwdriver with wireless option. It is built with a battery. You can charge the battery and use it easily anywhere.",
     "price": 99,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 2,
+    "_id": "628a55afdf146189afc5cc6d",
     "name": "DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool",
     "image": "https://i.ibb.co/zSXz4jk/2.jpg",
     "description": "DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool with wireless option and variable speed function. It is built with a battery. You can charge the battery and use it easily anywhere.",
     "price": 89,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 3,
+    "_id": "628a55afdf146189afc5cc6e",
     "name": "Electric Planer Brandix KL370090G 1050 Watts",
     "image": "https://i.ibb.co/gvXMfWM/3.jpg",
     "description": "Electric Planer Brandix KL370090G 1050 Watts. Power Consumption 1050 W, Model Number/Name YT-82140, Brand YATO, Voltage 230 V, Rpm 0-16000.",
     "price": 199,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 4,
+    "_id": "628a55afdf146189afc5cc6f",
     "name": "Drill Series 3 Brandix KSR4590PQS 1500 Watts",
     "image": "https://i.ibb.co/PwPvFfm/4.jpg",
     "description": "Variable speed for different drilling, Forward and reverse rotation. Lock-on switch for continuous use, Soft grip for more comfortable hold, Hammer/Drilling function change.",
     "price": 109,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 5,
+    "_id": "628a55afdf146189afc5cc70",
     "name": "DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool",
     "image": "https://i.ibb.co/ThSwDJ9/5.jpg",
     "description": "Variable speed for different drilling, Forward and reverse rotation. Lock-on switch for continuous use, Soft grip for more comfortable hold, Hammer/Drilling function change.",
     "price": 59,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 6,
+    "_id": "628a55afdf146189afc5cc71",
     "name": "Brandix Router Power Tool 2017ERXPK",
     "image": "https://i.ibb.co/MS9kZqh/6.jpg",
     "description": "Rated Power Input 3800(W), No-load Speed 580(r/min), Max. Drilling Capacity Φ250(mm), Net Weight 25.0(kg)3800W Diamond Core Drill 250mm With Water Source Brand DCA  AZZ250.",
     "price": 200,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 7,
+    "_id": "628a55afdf146189afc5cc72",
     "name": "Brandix Pliers",
     "image": "https://i.ibb.co/BBRrrVc/7.jpg",
     "description": "2-In-1 Function: Stripping and Cutting can be placed in one function, which will meet any multiple operating needs. It conforms to the design of artificial body mechanics and engineering technology, and it is easy to strip the line and quickly hold it, which is suitable for long-term work.",
     "price": 104,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 8,
+    "_id": "628a55afdf146189afc5cc73",
     "name": "Brandix Drilling Machine DM2019KW4 4kW",
     "image": "https://i.ibb.co/7y1kP70/8.jpg",
     "description": "All Bosch Product Imported by BOSCH BANGLADESH LTD, who provide 1 Year Service Warranty on all BOSCH product sold on our website. Warranty claimed via contacting our Service Center.",
     "price": 98,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 9,
+    "_id": "628a55afdf146189afc5cc74",
     "name": "Multi-function Screw Driver Set For Home Use",
     "image": "https://i.ibb.co/GpKB8M8/9.jpg",
     "description": "Multi Functional 32 in 1 Precision Handle Mini Screw driver set Mobile Phone Watch Laptop Repair Kit Tools Household Accessories.",
     "price": 94,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 10,
+    "_id": "628a55afdf146189afc5cc75",
     "name": "High Quality Electric Hand Planer, 4-38-Inch",
     "image": "https://i.ibb.co/k030G6v/10.jpg",
     "description": "The electric hand planer 4-38-Inch however, is a motorized more aggressive way to get the same job done faster and more efficiently without applying much elbow grease.",
     "price": 80,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 11,
+    "_id": "628a55afdf146189afc5cc76",
     "name": "Professional Cordless Drill Power Tools Set Competitive Price",
     "image": "https://i.ibb.co/PzFSj8d/11.jpg",
     "description": "Cordless Drill 10mm 12V Double Battery Brand Dongcheng Model (DCJZ09-10), DCJZ09-10, DONGCHENG, Double Battery.",
     "price": 43,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 12,
+    "_id": "628a55afdf146189afc5cc77",
     "name": "Professional Cordless Drill Power Tools Set Competitive",
     "image": "https://i.ibb.co/0Zkq6Ws/12.jpg",
     "description": "Brand Name DONGCHENG, Model No: DCJZ09-10, Voltage 12V, Drilling Capacity Steel 10mm, Wood 20mm, Speed 0-700RPM, Product Origin China (One of the Top Power Tool Brand), 1 year Company Free Service Warranty.",
     "price": 102,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 13,
+    "_id": "628a55afdf146189afc5cc78",
     "name": "Hign quality industrial wood planer",
     "image": "https://i.ibb.co/q7PDgmC/13.jpg",
     "description": "The electric wood planer 4-38-Inch however, is a motorized more aggressive way to get the same job done faster and more efficiently without applying much elbow grease.",
     "price": 50,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 14,
+    "_id": "628a55afdf146189afc5cc79",
     "name": "Professional Cordless Drill Power Tools Competitive",
     "image": "https://i.ibb.co/d477kLZ/14.jpg",
     "description": "Brand Name DONGCHTF, Model No: AFJZ09-10, Voltage 12V, Drilling Capacity Steel 10mm, Wood 20mm, Speed 0-700RPM, Product Origin China (One of the Top Power Tool Brand), 1 year Company Free Service Warranty.",
     "price": 65,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 15,
+    "_id": "628a55afdf146189afc5cc7a",
     "name": "White Whale Vacuum Cleaner High Quality",
     "image": "https://i.ibb.co/XJGzHj4/15.jpg",
     "description": "Less bulk and convenient to use, Allows you to retract the cord using a simple push-button, 3-filter system. Dust bag filter, Inner filter, the Exhaust filter, Low Noise Design, Space Saving, Block Fail-Safe Function",
     "price": 85,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 16,
+    "_id": "628a55afdf146189afc5cc7b",
     "name": "Undefined Tool IRadix DPS3000SY 2700 Watts",
     "image": "https://i.ibb.co/Wt9Cx0z/16.jpg",
     "description": "The electric wood planer 4-38-Inch however, is a motorized more aggressive way to get the same job done faster and more efficiently without applying much elbow grease.",
     "price": 95,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 17,
+    "_id": "628a55afdf146189afc5cc7c",
     "name": "Hand Tools Rubber Handle Adjustable Spanner",
     "image": "https://i.ibb.co/g6SFt0W/17.jpg",
     "description": "Wrenches perform the same function as ratchets and sockets tightening and loosening fasteners but there are differences and situations that call for one over the other.",
     "price": 30,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 18,
+    "_id": "628a55afdf146189afc5cc7d",
     "name": "High Quality Steel Clamp Tool",
     "image": "https://i.ibb.co/hRmgLpK/18.jpg",
     "description": "Versatile clamp secures parts for assembly, fastening, gluing, and welding in woodworking, metalworking, and automotive applications, Cast malleable iron frame with I-beam design provides sure strength.",
     "price": 80,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 19,
+    "_id": "628a55afdf146189afc5cc7e",
     "name": "Professional Straight Cutting Scissor",
     "image": "https://i.ibb.co/SmHbpHw/19.jpg",
     "description": "These micro tip snips are built spring-loaded so that they automatically push themselves open without you having to do the work, which greatly reduces hand fatigue and makes these snips great for those with arthritis, carpal tunnel, hand or wrist issues; Comfortable “grip” handles will make it easy to work for long-time use without making you feel hand pain.",
     "price": 99,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 20,
+    "_id": "628a55afdf146189afc5cc7f",
     "name": "High Quality Carbon Steel Multifunctional Hammer",
     "image": "https://i.ibb.co/6sVKFKd/20.jpg",
     "description": "A hammer is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object. This can be, for example, to drive nails into wood, to shape metal (as with a forge), or to crush rock.",
     "price": 90,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 21,
+    "_id": "628a55afdf146189afc5cc80",
     "name": "Hand tool kit",
     "image": "https://i.ibb.co/sbpKdkv/21.jpg",
     "description": "173-piece hand tool set for basic household repairs and everyday projects; includes 8 combination wrenches, 3/8-inch ratchet wrench, 22 hex keys, 6-inch slip-joint pliers, 6-inch long nose pliers, and more (scroll down to view complete list).",
     "price": 100,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 22,
+    "_id": "628a55afdf146189afc5cc81",
     "name": "Ash's Chainsaw 3.5kW",
     "image": "https://i.ibb.co/fGTt4mJ/22.jpg",
     "description": "With an exceptional power-to-weight ratio, the STIHL MS 250 is up to the job. Its easy to use and combines great features to tackle clearing or cleanup tasks, as well as cut through small limbs and trees.",
     "price": 105,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 23,
+    "_id": "628a55afdf146189afc5cc82",
     "name": "High Quality Carbon Steel Mini Drilling Machines",
     "image": "https://i.ibb.co/WcRBbpS/23.jpg",
     "description": "Variable speed for different drilling, Forward and reverse rotation. Lock-on switch for continuous use, Soft grip for more comfortable hold, Hammer/Drilling function change.",
     "price": 50,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 24,
+    "_id": "628a55afdf146189afc5cc83",
     "name": "High Quality Carbon Steel Professional Power Tools",
     "image": "https://i.ibb.co/f1Hy9cK/24.jpg",
     "description": "The electric wood planer 4-38-Inch however, is a motorized more aggressive way to get the same job done faster and more efficiently without applying much elbow grease.",
     "price": 40,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 25,
+    "_id": "628a55afdf146189afc5cc84",
     "name": "Electrical Magnetic Impact Power Hammer Drills",
     "image": "https://i.ibb.co/j4Z2Phx/25.jpg",
     "description": "Cordless Drill Professional Combo Drill And Screwdriver with wireless option. It is built with a battery. You can charge the battery and use it easily anywhere.",
     "price": 68,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 26,
+    "_id": "628a55afdf146189afc5cc85",
     "name": "Power Tools Set Chinese Manufacturer Production 50V",
     "image": "https://i.ibb.co/nz8Gx6p/26.jpg",
     "description": "DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool with wireless option and variable speed function. It is built with a battery. You can charge the battery and use it easily anywhere.",
     "price": 70,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 27,
+    "_id": "628a55afdf146189afc5cc86",
     "name": "Wall Polishing Square Sander Electric Machine",
     "image": "https://i.ibb.co/7yMRw0Y/27.jpg",
     "description": "Electric Planer Brandix KL370090G 1050 Watts. Power Consumption 1050 W, Model Number/Name YT-82140, Brand YATO, Voltage 230 V, Rpm 0-16000.",
     "price": 64,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 28,
+    "_id": "628a55afdf146189afc5cc87",
     "name": "Power Hammer Drills 200V Machine Screwdriver",
     "image": "https://i.ibb.co/KwNSwsb/28.jpg",
     "description": "Variable speed for different drilling, Forward and reverse rotation. Lock-on switch for continuous use, Soft grip for more comfortable hold, Hammer/Drilling function change.",
     "price": 36,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   },
   {
-    "_id": 29,
+    "_id": "628a55afdf146189afc5cc88",
     "name": "90 Degree Angle Square Combination Handle",
     "image": "https://i.ibb.co/LrMy6HQ/29.jpg",
     "description": "Square Ruler, aluminum handle with stainless steel scale, 0-30cm / 0-12 inches, Total Size 29.8 x 13.5 x 0.9cm /11.7inch x 5.3inch x 0.35inch (L * W * Max.T ) Silver Tone.",
     "price": 10,
-    "quantity": 500,
-    "available": 3000
+    "quantity": 3000
   }
 ]
