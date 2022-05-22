@@ -36,19 +36,50 @@ const Purchase = () => {
         }
     }
 
-    // const handlePurchase = event => {
-    //     event.preventDefault();
+    const handlePurchase = event => {
+        event.preventDefault();
 
-    //     const purchase = {
-    //         productId: id,
-    //         productName: tools.name,
-    //         buyer: user.email,
-    //         buyerName: user.displayName,
-    //         quantity: event.target.quantity.value
-    //     }
+        const purchase = {
+            productId: id,
+            productName: tools.name,
+            buyer: user.email,
+            buyerName: user.displayName,
+            address: event.target.address.value,
+            phone: event.target.phone.value,
+            quantity: event.target.quantity.value
+        }
 
+        fetch('http://localhost:5000/purchase', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(purchase)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            });
 
-    // }
+        let toolQuantity = JSON.parse(tools.quantity);
+        let givenQuantity = parseInt(event.target.quantity.value);
+        let newQuantity = toolQuantity - givenQuantity;
+        setTools({ ...tools, quantity: newQuantity })
+
+        const url = `http://localhost:5000/tools/${id}`;
+        console.log(url);
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ quantity: newQuantity })
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            });
+    }
 
     return (
         <div className='container max-w-7xl'>
@@ -63,7 +94,7 @@ const Purchase = () => {
                 </div>
             </div>
 
-            <form>
+            <form onSubmit={handlePurchase}>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Name</span>
@@ -80,13 +111,13 @@ const Purchase = () => {
                     <label className="label">
                         <span className="label-text">Address</span>
                     </label>
-                    <input type="text" placeholder="Address" className="input input-bordered input-md w-full max-w-xs" />
+                    <input type="text" placeholder="Address" name="address" className="input input-bordered input-md w-full max-w-xs" />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Phone</span>
                     </label>
-                    <input type="text" placeholder="Phone number" className="input input-bordered input-md w-full max-w-xs" />
+                    <input type="tel" placeholder="Phone number" name="phone" className="input input-bordered input-md w-full max-w-xs" />
                 </div>
                 <div className="form-control">
                     <label className="label">
