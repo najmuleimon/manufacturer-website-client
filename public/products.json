@@ -1,0 +1,290 @@
+[
+  {
+    "_id": 1,
+    "name": "Cordless Drill Professional Combo Drill And Screwdriver",
+    "image": "https://i.ibb.co/DW8bnJY/1.jpg",
+    "description": "OLED pictures and sound in compact size for gaming Cognitive Processor XR™ understands how humans see and hear for true immersion Screen speaker with Processor XR turns any sound immersive Multi-position stand for versatile TV placement",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 2,
+    "name": "DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool",
+    "image": "https://i.ibb.co/zSXz4jk/2.jpg",
+    "description": "4K AI upscaling uses Samsungs powerful Quantum Processor, automatically analyzing the input source to reduce image noise, restore lost detail, and define edges around objects and text. Now you can get 4K resolution images and sound, regardless of the source.    ",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 3,
+    "name": "Electric Planer Brandix KL370090G 300 Watts",
+    "category": "Laptop",
+    "image": "https://i.ibb.co/gvXMfWM/3.jpg",
+    "description": "Intel Core i5-1135G7 Processor (up to 4.2 GHz 8 MB cache), 8 GB DDR4-3200 SDRAM, 512 GB PCIe NVMe M.2 SSD, 15.6 inch diagonal FHD (1920 x 1080) Display",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 4,
+    "name": "Drill Series 3 Brandix KSR4590PQS 1500 Watts",
+    "category": "Laptop",
+    "image": "https://i.ibb.co/PwPvFfm/4.jpg",
+    "description": "From spilled drinks to drops and knocks, modern laptops need to withstand life on the road. The ThinkPad X380 Yoga has you covered. It's tested against 12 MIL-SPEC requirements and passes more than 200 durability tests. Whether it's a day at the office, or a day on the move, the X380 Yoga has you covered.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 5,
+    "name": "DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool",
+    "category": "Speaker",
+    "image": "https://i.ibb.co/ThSwDJ9/5.jpg",
+    "description": "A powerful helper Google Home is powered by the Google Assistant. Ask it questions. Tell it to do things. It's your own Google, always ready to help. Get answers from Google Use your voice to quickly find information about the weather, news, sports and more. “Hey Google, what time does the grocery store close?” Bring your music to life, using only your voice Google Home's high-excursion speaker delivers a big, rich sound in a compact size. “Hey Google, listen to Discover Weekly on Spotify.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 6,
+    "name": "Brandix Router Power Tool 2017ERXPK",
+    "category": "Speaker",
+    "image": "https://i.ibb.co/MS9kZqh/6.jpg",
+    "description": "Google Nest Mini 2nd gen Smart Home Assistant Chalk Gray White Small Speaker Warranty 30 days Google Home Mini has the Google Assistant built in Ask it questions. Tell it to do things. It's never been easier to get hands-free help in any room Sounds Bigger and Better than ever Tackle your day. Set alarms, add items to your shopping list, learn about your commute, and more.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 7,
+    "name": "Brandix Pliers",
+    "category": "Mobile",
+    "image": "https://i.ibb.co/BBRrrVc/7.jpg",
+    "description": "Apple iPhone 11 is powered by the Apple A13 Bionic processor. The smartphone comes with a 6.1 inches Liquid Retina IPS LCD capacitive touchscreen and 828 x 1792 pixels resolution. The screen of the device is protected by Scratch-resistant glass and oleophobic coating. The rear camera consists of a 12 MP (wide) + 12 MP (ultrawide) lenses.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 8,
+    "name": "Brandix Drilling Machine DM2019KW4 4kW",
+    "category": "Mobile",
+    "image": "https://i.ibb.co/7y1kP70/8.jpg",
+    "description": "The phone which is powered by the new Apple A15 Bionic processor comes with a 6.7 inch Super Retina XDR OLED capacitive touchscreen and 2778 x 1284 pixels resolution. It features True Tone and a Wide color gamut. The display screen is protected by a Scratch-resistant ceramic glass, oleophobic coating, and features 120Hz, HDR10, Dolby Vision, 1000 nits (typ), and 1200 nits (peak).",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 9,
+    "name": "Multi-function Screw Driver Set For Home Use",
+    "category": "Refrigerator",
+    "image": "https://i.ibb.co/GpKB8M8/9.jpg",
+    "description": "Space Max™ Technology, Digital Inverter with Smart Connect, Twin Cooling Plus, Anti Bacteria Protector, Power Cool & Power Fridge, Cool Pack, Convertible Mode.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 10,
+    "name": "High Quality Electric Hand Planer, 4-38-Inch",
+    "category": "Refrigerator",
+    "image": "https://i.ibb.co/k030G6v/10.jpg",
+    "description": "Digital Inverter with Smart Connect, Twin Cooling Plus, Anti Bacteria Protector, Power Cool & Power Fridge, Cool Pack, Convertible Mode.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 11,
+    "name": "Professional Cordless Drill Power Tools Set Competitive Price",
+    "category": "Digital Camera",
+    "image": "https://i.ibb.co/PzFSj8d/11.jpg",
+    "description": "20.1 megapixel plus 8x optical zoom captures detailed subjects. Capture your videos in 720p HD Movie mode. Creative shooting with Picture and Beauty effects. Advanced Flash illuminates distant subjects for beautifully lit photos iAuto mode automatically optimizes camera settings.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 12,
+    "name": "Professional Cordless Drill Power Tools Set Competitive",
+    "category": "Digital Camera",
+    "image": "https://i.ibb.co/0Zkq6Ws/12.jpg",
+    "description": "Whip out the W800 to capture crisp, smooth footage in an instant. At the press of a button, you can record blur-free 720 HD images with digital sound.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 13,
+    "name": "Hign quality industrial wood planer",
+    "category": "Computer Accessories",
+    "image": "https://i.ibb.co/q7PDgmC/13.jpg",
+    "description": "Just plug the mouse into a USB port and it's ready to use. No software or batteries required. Logitech reliability You get a mouse you can count on with the high quality and reliability that have made Logitech the global leader for mice . Smooth traveler You'll enjoy smooth cursor control, precise tracking and easy text selection. Comfy, contoured shape Your hand will be more comfortable than with your touchpad.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 14,
+    "name": "Professional Cordless Drill Power Tools Competitive",
+    "category": "Computer Accessories",
+    "image": "https://i.ibb.co/d477kLZ/14.jpg",
+    "description": "Advanced 2.4 GHz powerful wireless connection with distance up to 10-15m. Auto 4-level power saving. It will be in sleep mode in 0.2s of inactivity. Anti-slippery belt design provides with an enhanced grip to ergonomic and comfort fit. Adjustable resolution 1000/1600/2000 DPI. Extreme quality offer over 5 million clicks guaranteed. Switch button on the back make this wireless mouse to perfect on-the-go companion.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 15,
+    "name": "White Whale Vacuum Cleaner High Quality",
+    "category": "Watch",
+    "image": "https://i.ibb.co/XJGzHj4/15.jpg",
+    "description": "Tough, durable, and transparent surface keep your LCD screen clean and unstratched. Oleophobic coating prevents fingerprints and other contaminants and makes the film easy to clean. Coated on the back with a strong silicone adhesive for easy installation. Ultra slim, only 0.3mm.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 16,
+    "name": "Undefined Tool IRadix DPS3000SY 2700 Watts",
+    "category": "Watch",
+    "image": "https://i.ibb.co/Wt9Cx0z/16.jpg",
+    "description": "The aluminum case is lightweight and made from 100 percent recycled aerospace-grade alloy. The Sport Band is made from a durable yet surprisingly soft high-performance fluoroelastomer with an innovative pin-and-tuck closure.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 17,
+    "name": "Hand Tools Rubber Handle Adjustable Spanner",
+    "category": "Home Theater",
+    "image": "https://i.ibb.co/g6SFt0W/17.jpg",
+    "description": "With 160 Watts Peak power on tap, this 5.1 speaker system wraps your space in high-quality audio that sounds amazing. Enjoy true surround sound from any source—your TV, phone, computer, games1Console must be connected to TV via RCA and more. You can even play audio content directly from SD cards, USB drives or FM radio. The 133.35 mm subwoofer driver pumps out bass you can feel, while the included remote and extra-long rear cables make it easy to set up and use.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 18,
+    "name": "High Quality Steel Clamp Tool",
+    "category": "Home Theater",
+    "image": "https://i.ibb.co/hRmgLpK/18.jpg",
+    "description": "Stream any audio from your Bluetooth smart device to LG Home Theater with no wires. Play Videos straight from a USB storage device. DVD HTS, 5.1 Channel, Bluetooth, USB Direct Recording, Bass Blast Subwoofer, 1080p Up-scaling.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 19,
+    "name": "Professional Straight Cutting Scissor",
+    "category": "Headphone",
+    "image": "https://i.ibb.co/SmHbpHw/19.jpg",
+    "description": "You can listen to your favourite songs in high-quality audio and have clear conversations with the JBL Tune 760NC Wireless Headset. It features Active Noise Cancellation technology, enabling you to listen to music in a noise-free environment. In addition, the long-lasting battery in this headset lets you enjoy its performance without interruptions for up to 50 hours. Furthermore, owing to its wired mode, you can listen to music for as long as you want with the detachable AUX cable.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 20,
+    "name": "High Quality Carbon Steel Multifunctional Hammer",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/6sVKFKd/20.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 21,
+    "name": "Hand tool kit",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/sbpKdkv/21.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 22,
+    "name": "Ash's Chainsaw 3.5kW",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/fGTt4mJ/22.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 23,
+    "name": "High Quality Carbon Steel Mini Drilling Machines",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/WcRBbpS/23.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 24,
+    "name": "High Quality Carbon Steel Professional Power Tools",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/f1Hy9cK/24.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 25,
+    "name": "Electrical Magnetic Impact Power Hammer Drills",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/j4Z2Phx/25.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 26,
+    "name": "Power Tools Set Chinese Manufacturer Production 50V",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/nz8Gx6p/26.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 27,
+    "name": "Wall Polishing Square Sander Electric Machine",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/7yMRw0Y/27.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 28,
+    "name": "Power Hammer Drills 200V Machine Screwdriver",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/KwNSwsb/28.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  },
+  {
+    "_id": 29,
+    "name": "90 Degree Angle Square Combination Handle",
+    "category": "Desktop Computer",
+    "image": "https://i.ibb.co/LrMy6HQ/29.jpg",
+    "description": "AMD Ryzen 5 3400G Processor Base Frequency 3.7 GHz Maximum Turbo Frequency 4.2 GHz. Radeon RX Vega 11 Graphics. MSI B450M Mortar MAX Military Style AMD M-ATX Gaming Motherboard, 4GB 2400MHz DDR4 RAM, 2.5 inch SATA 120GB SSD. ATX Casing With Power Supply Included MaxGreen G563BL Window ATX Casing.",
+    "price": 99,
+    "quantity": 500,
+    "available": 2000
+  }
+]
