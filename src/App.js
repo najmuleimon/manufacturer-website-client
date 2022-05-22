@@ -8,6 +8,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import Purchase from './Pages/Purchase/Purchase';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
+import PrivateRoute from './Pages/Login/PrivateRoute';
 
 function App() {
   return (
@@ -17,7 +18,11 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
-        <Route path='dashboard' element={<Dashboard />} />
+        <Route path='dashboard' element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        } />
         <Route path='purchase' element={<Purchase />} />
         <Route path='blogs' element={<Blogs />} />
         <Route path='*' element={<NotFound />} />

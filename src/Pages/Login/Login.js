@@ -1,31 +1,32 @@
-import React from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import React, { useEffect } from 'react';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loader from '../Shared/Loader';
 
 const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
-    // const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
-    // const navigate = useNavigate();
-    // const location = useLocation();
-    // const from = location.state?.from?.pathname || "/";
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
     let signInError, googleSignInError;
 
-    // useEffect(() => {
-    //     if (user || googleUser) {
-    //         navigate(from, { replace: true });
-    //     }
-    // }, [user, googleUser, navigate, from])
+    useEffect(() => {
+        if (user || googleUser) {
+            navigate(from, { replace: true });
+        }
+    }, [user, googleUser, navigate, from])
 
-    // if (loading || googleLoading) {
-    //     return <Loading />
-    // }
+    if (loading || googleLoading) {
+        return <Loader />
+    }
 
-    if (error) {
+    if (error || googleError) {
         signInError = <p className='text-sm font-normal text-red-500'>{error?.message}</p>
-        // googleSignInError = <p className='text-sm font-normal text-red-500'>{googleError?.message}</p>
+        googleSignInError = <p className='text-sm font-normal text-red-500'>{googleError?.message}</p>
     }
 
     const onSubmit = data => {
@@ -96,7 +97,7 @@ const Login = () => {
                     <div className="divider">OR</div>
 
                     {/* google login button */}
-                    <button className="btn btn-outline hover:bg-primary hover:border-primary">Continue with Google</button>
+                    <button onClick={() => signInWithGoogle()} className="btn btn-outline hover:bg-primary hover:border-primary">Continue with Google</button>
                 </div>
             </div>
         </div>

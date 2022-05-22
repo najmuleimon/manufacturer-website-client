@@ -1,12 +1,13 @@
-import React from 'react';
-import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
+import React, { useEffect } from 'react';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loader from '../Shared/Loader';
 
 const Signup = () => {
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
-    // const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
@@ -19,19 +20,19 @@ const Signup = () => {
         await updateProfile({ displayName: data.name });
     };
 
-    // useEffect(() => {
-    //     if (user || googleUser) {
-    //         navigate('/');
-    //     }
-    // }, [user, googleUser, navigate]);
+    useEffect(() => {
+        if (user || googleUser) {
+            navigate('/');
+        }
+    }, [user, googleUser, navigate]);
 
-    // if (loading || googleLoading || updating) {
-    //     return <Loading />
-    // }
+    if (loading || googleLoading || updating) {
+        return <Loader />
+    }
 
-    if (error) {
+    if (error || googleError) {
         signUpError = <p className='text-sm font-normal text-red-500'>{error?.message}</p>
-        // googleSignUpError = <p className='text-sm font-normal text-red-500'>{googleError?.message}</p>
+        googleSignUpError = <p className='text-sm font-normal text-red-500'>{googleError?.message}</p>
     }
 
     return (
@@ -114,7 +115,7 @@ const Signup = () => {
                     <div className="divider">OR</div>
 
                     {/* google login button */}
-                    <button className="btn btn-outline hover:bg-primary hover:border-primary">Continue with Google</button>
+                    <button onClick={() => signInWithGoogle()} className="btn btn-outline hover:bg-primary hover:border-primary">Continue with Google</button>
                 </div>
             </div>
         </div>
