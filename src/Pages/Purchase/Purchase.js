@@ -38,15 +38,22 @@ const Purchase = () => {
 
     const handlePurchase = event => {
         event.preventDefault();
+        let toolQuantity = JSON.parse(tools.quantity);
+        let givenQuantity = parseInt(event.target.quantity.value);
+        let newQuantity = toolQuantity - givenQuantity;
+        let toolPrice = JSON.parse(tools.price);
+        let totalPrice = givenQuantity * toolPrice;
 
         const purchase = {
             productId: id,
             productName: tools.name,
+            productImage: tools.image,
             buyer: user.email,
             buyerName: user.displayName,
             address: event.target.address.value,
             phone: event.target.phone.value,
-            quantity: event.target.quantity.value
+            quantity: event.target.quantity.value,
+            price: totalPrice,
         }
 
         fetch('http://localhost:5000/order', {
@@ -61,10 +68,9 @@ const Purchase = () => {
                 console.log(data);
             });
 
-        let toolQuantity = JSON.parse(tools.quantity);
-        let givenQuantity = parseInt(event.target.quantity.value);
-        let newQuantity = toolQuantity - givenQuantity;
+
         setTools({ ...tools, quantity: newQuantity })
+
 
         const url = `http://localhost:5000/tools/${id}`;
         console.log(url);
