@@ -14,6 +14,7 @@ const Navbar = () => {
 
     const logout = () => {
         signOut(auth);
+        localStorage.removeItem('accessToken');
     };
     return (
         <div className="container max-w-7xl">
@@ -45,9 +46,9 @@ const Navbar = () => {
                         user ? <button onClick={logout} className="btn">Logout</button> : <Link to='/login' className="btn">Login</Link>
                     }
                 </div>
-                <label for="dashboard-drawer" class="btn btn-ghost drawer-button lg:hidden ml-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                <label htmlFor="dashboard-drawer" className="btn btn-ghost drawer-button lg:hidden ml-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </label>
             </div>

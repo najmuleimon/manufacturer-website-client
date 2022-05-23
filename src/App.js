@@ -12,6 +12,7 @@ import PrivateRoute from './Pages/Login/PrivateRoute';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
+import Users from './Pages/Dashboard/Users';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route index element={<MyOrders />}></Route>
           <Route path="add-review" element={<AddReview />}></Route>
           <Route path="profile" element={<MyProfile />}></Route>
+          <Route path="users" element={<Users />}></Route>
         </Route>
         <Route path='purchase/:id' element={<Purchase />} />
         <Route path='blogs' element={<Blogs />} />

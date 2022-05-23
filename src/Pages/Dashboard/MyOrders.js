@@ -1,19 +1,34 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?buyer=${user.email}`)
-            .then(res => res.json())
+        fetch(`http://localhost:5000/orders?buyer=${user.email}`, {
+            method: 'GET',
+            headers: {
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    signOut(auth);
+                    localStorage.removeItem('accessToken');
+                    navigate('/');
+                }
+                return res.json()
+            })
             .then(data => setOrders(data));
     }, [])
     return (
-        <div class="overflow-x-auto">
-            <table class="table table-zebra w-full">
+        <div className="overflow-x-auto">
+            <table className="table table-zebra w-full">
                 <thead>
                     <tr>
                         <th>Serial</th>
@@ -26,11 +41,11 @@ const MyOrders = () => {
                 </thead>
                 <tbody>
                     {
-                        orders.map((order, index) => <tr>
+                        orders.map((order, index) => <tr key={index}>
                             <th>{index + 1}</th>
                             <td>
-                                <div class="avatar">
-                                    <div class="mask mask-squircle w-12 h-12">
+                                <div className="avatar">
+                                    <div className="mask mask-squircle w-12 h-12">
                                         <img src={order.productImage} alt="Avatar Tailwind CSS Component" />
                                     </div>
                                 </div>

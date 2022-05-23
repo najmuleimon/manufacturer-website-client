@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfil
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import useToken from '../../hooks/useToken';
 import Loader from '../Shared/Loader';
 
 const Signup = () => {
@@ -11,6 +12,7 @@ const Signup = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const [token] = useToken(user || googleUser);
 
     const navigate = useNavigate();
     let signUpError, googleSignUpError;
@@ -21,10 +23,10 @@ const Signup = () => {
     };
 
     useEffect(() => {
-        if (user || googleUser) {
+        if (token) {
             navigate('/');
         }
-    }, [user, googleUser, navigate]);
+    }, [token, navigate]);
 
     if (loading || googleLoading || updating) {
         return <Loader />
