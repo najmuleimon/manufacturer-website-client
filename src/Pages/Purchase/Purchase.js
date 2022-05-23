@@ -49,7 +49,7 @@ const Purchase = () => {
             quantity: event.target.quantity.value
         }
 
-        fetch('http://localhost:5000/purchase', {
+        fetch('http://localhost:5000/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

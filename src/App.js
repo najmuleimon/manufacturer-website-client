@@ -9,6 +9,9 @@ import Purchase from './Pages/Purchase/Purchase';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
 import PrivateRoute from './Pages/Login/PrivateRoute';
+import MyOrders from './Pages/Dashboard/MyOrders';
+import AddReview from './Pages/Dashboard/AddReview';
+import MyProfile from './Pages/Dashboard/MyProfile';
 
 function App() {
   return (
@@ -18,11 +21,11 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
-        <Route path='dashboard' element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        } />
+        <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>
+          <Route index element={<MyOrders />}></Route>
+          <Route path="add-review" element={<AddReview />}></Route>
+          <Route path="profile" element={<MyProfile />}></Route>
+        </Route>
         <Route path='purchase/:id' element={<Purchase />} />
         <Route path='blogs' element={<Blogs />} />
         <Route path='*' element={<NotFound />} />

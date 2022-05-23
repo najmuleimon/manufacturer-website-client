@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import { sendPasswordResetEmail } from 'firebase/auth';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -9,6 +10,8 @@ const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+    // const [resetPassError, setResetPassError] = useState('');
+    // const emailRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
@@ -28,6 +31,17 @@ const Login = () => {
         signInError = <p className='text-sm font-normal text-red-500'>{error?.message}</p>
         googleSignInError = <p className='text-sm font-normal text-red-500'>{googleError?.message}</p>
     }
+
+    // const handleResetPass = async () => {
+    //     const email = emailRef.current.value;
+    //     console.log(email);
+    //     if (email) {
+    //         await sendPasswordResetEmail(email);
+    //     }
+    //     else {
+    //         setResetPassError('Please enter your email address')
+    //     }
+    // }
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
@@ -93,6 +107,7 @@ const Login = () => {
                     </form>
 
                     {/* signup page link */}
+                    {/* <button onClick={handleResetPass}>forget password?</button> */}
                     <p><small>Didn't create an Account yet? <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
 
