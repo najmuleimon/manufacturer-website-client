@@ -13,6 +13,10 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Users from './Pages/Dashboard/Users';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
+import AddProduct from './Pages/Dashboard/AddProduct';
 
 function App() {
   return (
@@ -27,11 +31,15 @@ function App() {
           <Route path="add-review" element={<AddReview />}></Route>
           <Route path="profile" element={<MyProfile />}></Route>
           <Route path="users" element={<Users />}></Route>
+          <Route path="manage-orders" element={<ManageOrders />}></Route>
+          <Route path="add-product" element={<AddProduct />}></Route>
         </Route>
         <Route path='purchase/:id' element={<Purchase />} />
         <Route path='blogs' element={<Blogs />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+
+      <ToastContainer />
     </div>
   );
 }

@@ -1,7 +1,12 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, Outlet } from 'react-router-dom';
+import auth from '../../firebase.init';
+import useAdmin from '../../hooks/useAdmin';
 
 const Dashboard = () => {
+    const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     return (
         <div className="drawer drawer-mobile bg-gray-50">
             <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
@@ -16,6 +21,8 @@ const Dashboard = () => {
                     <li><Link to="/dashboard">My Orders</Link></li>
                     <li><Link to="/dashboard/add-review">Add a Review</Link></li>
                     <li><Link to="/dashboard/profile">My Profile</Link></li>
+                    <li><Link to="/dashboard/manage-orders">Manage Orders</Link></li>
+                    <li><Link to="/dashboard/add-product">Add Product</Link></li>
                     <li><Link to="/dashboard/users">Make Admin</Link></li>
                 </ul>
 
