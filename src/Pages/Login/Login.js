@@ -11,8 +11,6 @@ const Login = () => {
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
-    // const [resetPassError, setResetPassError] = useState('');
-    // const emailRef = useRef('');
     const [token] = useToken(user || googleUser);
     const navigate = useNavigate();
     const location = useLocation();
@@ -33,17 +31,6 @@ const Login = () => {
         signInError = <p className='text-sm font-normal text-red-500'>{error?.message}</p>
         googleSignInError = <p className='text-sm font-normal text-red-500'>{googleError?.message}</p>
     }
-
-    // const handleResetPass = async () => {
-    //     const email = emailRef.current.value;
-    //     console.log(email);
-    //     if (email) {
-    //         await sendPasswordResetEmail(email);
-    //     }
-    //     else {
-    //         setResetPassError('Please enter your email address')
-    //     }
-    // }
 
     const onSubmit = data => {
         signInWithEmailAndPassword(data.email, data.password);
@@ -109,8 +96,7 @@ const Login = () => {
                     </form>
 
                     {/* signup page link */}
-                    {/* <button onClick={handleResetPass}>forget password?</button> */}
-                    <p><small>Didn't create an Account yet? <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
+                    <p><small>Don't have any Account? <Link className='text-primary' to="/signup">Create New Account</Link></small></p>
                     <div className="divider">OR</div>
 
                     {/* google login button */}
