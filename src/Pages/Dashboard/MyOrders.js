@@ -10,22 +10,39 @@ const MyOrders = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?buyer=${user.email}`, {
-            method: 'GET',
-            headers: {
-                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
-            .then(res => {
-                if (res.status === 401 || res.status === 403) {
-                    signOut(auth);
-                    localStorage.removeItem('accessToken');
-                    navigate('/');
+        if (user) {
+            fetch(`http://localhost:5000/orders?buyer=${user.email}`, {
+                method: 'GET',
+                headers: {
+                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
                 }
-                return res.json()
             })
-            .then(data => setOrders(data));
-    }, [])
+                .then(res => {
+                    if (res.status === 401 || res.status === 403) {
+                        signOut(auth);
+                        localStorage.removeItem('accessToken');
+                        navigate('/');
+                    }
+                    return res.json()
+                })
+                .then(data => setOrders(data));
+        }
+    }, [user])
+
+    const handleDelete = id => {
+        const proceed = window.confirm('Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/order/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const remaining = orders.filter(order => order._id !== id);
+                    setOrders(remaining);
+                })
+        }
+    }
     return (
         <div className="overflow-x-auto">
             <table className="table table-zebra w-full">
@@ -38,6 +55,7 @@ const MyOrders = () => {
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,16 +74,21 @@ const MyOrders = () => {
                             <td>{order.quantity}</td>
                             <td>${order.price}</td>
                             <td>
-                                {(order.price && !order.paid) && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-primary'>Pay</button></Link>}
-                                {(order.price && order.paid) && <div>
+                                {!order.paid && <Link to={`/dashboard/payment/${order._id}`}><button className='btn btn-sm btn-primary'>Pay</button></Link>}
+                                {order.paid && <div>
                                     <p><span className='text-sm font-medium text-primary'>Paid</span></p>
                                     <p>Transaction id: <span className='text-sm font-normal text-primary'>{order.transactionId}</span></p>
                                 </div>}
                             </td>
+                            <td>{!order.paid && <label htmlFor="delete-confirm-modal" className="btn btn-sm btn-error" onClick={() => handleDelete(order._id)}>Cancel</label>}</td>
                         </tr>)
                     }
                 </tbody>
             </table>
+
+            {/* delete confirm modal */}
+
+
         </div>
     );
 };
