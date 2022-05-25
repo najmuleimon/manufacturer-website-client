@@ -20,6 +20,7 @@ import ManageProducts from './Pages/Dashboard/ManageProducts';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import PrivateAdminRoute from './Pages/Login/PrivateAdminRoute';
 import Payment from './Pages/Dashboard/Payment';
+import MyPortfolio from './Pages/Portfolio/MyPortfolio';
 
 function App() {
   return (
@@ -35,12 +36,13 @@ function App() {
           <Route path="profile" element={<MyProfile />}></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
           <Route path="users" element={<PrivateAdminRoute><Users /></PrivateAdminRoute>}></Route>
-          <Route path="manage-orders" element={<ManageOrders />}></Route>
+          <Route path="manage-orders" element={<PrivateAdminRoute><ManageOrders /></PrivateAdminRoute>}></Route>
           <Route path="add-product" element={<PrivateAdminRoute><AddProduct /></PrivateAdminRoute>}></Route>
-          <Route path="manage-products" element={<ManageProducts />}></Route>
+          <Route path="manage-products" element={<PrivateAdminRoute><ManageProducts /></PrivateAdminRoute>}></Route>
         </Route>
         <Route path='purchase/:id' element={<Purchase />} />
         <Route path='blogs' element={<Blogs />} />
+        <Route path='portfolio' element={<MyPortfolio />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
 

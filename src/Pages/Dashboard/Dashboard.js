@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 
@@ -19,19 +19,19 @@ const Dashboard = () => {
                 <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
 
-                    <li><Link to="/dashboard/profile">My Profile</Link></li>
+                    <li><NavLink to="/dashboard/profile">My Profile</NavLink></li>
                     {
                         admin ?
                             <>
-                                <li><Link to="/dashboard/manage-orders">Manage Orders</Link></li>
-                                <li><Link to="/dashboard/add-product">Add Product</Link></li>
-                                <li><Link to="/dashboard/manage-products">Manage Products</Link></li>
-                                <li><Link to="/dashboard/users">Users</Link></li>
+                                <li><NavLink to="/dashboard/manage-orders">Manage Orders</NavLink></li>
+                                <li><NavLink to="/dashboard/add-product">Add Product</NavLink></li>
+                                <li><NavLink to="/dashboard/manage-products">Manage Products</NavLink></li>
+                                <li><NavLink to="/dashboard/users">Users</NavLink></li>
                             </>
                             :
                             <>
-                                <li><Link to="/dashboard/my-orders">My Orders</Link></li>
-                                <li><Link to="/dashboard/add-review">Add a Review</Link></li>
+                                <li><NavLink to="/dashboard/my-orders">My Orders</NavLink></li>
+                                <li><NavLink to="/dashboard/add-review">Add a Review</NavLink></li>
                             </>
                     }
 
