@@ -1,48 +1,36 @@
 import { signOut } from 'firebase/auth';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loader from '../Shared/Loader';
+import OrderConfirmModal from './OrderConfirmModal';
 
 const MyOrders = () => {
-    const [orders, setOrders] = useState([]);
     const [user] = useAuthState(auth);
     const navigate = useNavigate();
+    const [deletingOrder, setDeletingOrder] = useState(null);
 
-    useEffect(() => {
-        if (user) {
-            fetch(`http://localhost:5000/orders?buyer=${user.email}`, {
-                method: 'GET',
-                headers: {
-                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            })
-                .then(res => {
-                    if (res.status === 401 || res.status === 403) {
-                        signOut(auth);
-                        localStorage.removeItem('accessToken');
-                        navigate('/');
-                    }
-                    return res.json()
-                })
-                .then(data => setOrders(data));
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/orders?buyer=${user.email}`, {
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
-    }, [user])
+    }).then(res => {
+        if (res.status === 401 || res.status === 403) {
+            signOut(auth);
+            localStorage.removeItem('accessToken');
+            navigate('/');
+        }
+        return res.json()
+    }));
 
-    const handleDelete = id => {
-        const proceed = window.confirm('Are you sure?');
-        if (proceed) {
-            const url = `http://localhost:5000/order/${id}`;
-            fetch(url, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    const remaining = orders.filter(order => order._id !== id);
-                    setOrders(remaining);
-                })
-        }
+    if (isLoading) {
+        return <Loader />
     }
+
+
     return (
         <div className="overflow-x-auto">
             <table className="table table-zebra w-full">
@@ -80,14 +68,18 @@ const MyOrders = () => {
                                     <p>Transaction id: <span className='text-sm font-normal text-primary'>{order.transactionId}</span></p>
                                 </div>}
                             </td>
-                            <td>{!order.paid && <label htmlFor="delete-confirm-modal" className="btn btn-sm btn-error" onClick={() => handleDelete(order._id)}>Cancel</label>}</td>
+                            <td>{!order.paid && <label htmlFor="delete-confirm-modal" className="btn btn-sm btn-error" onClick={() => setDeletingOrder(order)}>Cancel</label>}</td>
                         </tr>)
                     }
                 </tbody>
             </table>
 
             {/* delete confirm modal */}
-
+            {deletingOrder && <OrderConfirmModal
+                deletingOrder={deletingOrder}
+                refetch={refetch}
+                setDeletingOrder={setDeletingOrder}
+            ></OrderConfirmModal>}
 
         </div>
     );
