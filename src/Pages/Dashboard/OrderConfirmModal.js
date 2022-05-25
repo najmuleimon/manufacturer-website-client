@@ -22,13 +22,13 @@ const OrderConfirmModal = ({ deletingOrder, refetch, setDeletingOrder }) => {
     }
     return (
         <div>
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <h3 class="font-medium text-sm text-neutral">Are you sure you want to delete your order?</h3>
-                    <div class="modal-action">
-                        <label for="delete-confirm-modal" class="btn btn-neutral">Cancel</label>
-                        <button onClick={() => handleDelete(deletingOrder._id)} class="btn btn-primary">Delete</button>
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <h3 className="font-medium text-sm text-neutral">Are you sure you want to delete your order?</h3>
+                    <div className="modal-action">
+                        <label for="delete-confirm-modal" className="btn btn-neutral">Cancel</label>
+                        <button onClick={() => handleDelete(deletingOrder._id)} className="btn btn-primary">Delete</button>
                     </div>
                 </div>
             </div>

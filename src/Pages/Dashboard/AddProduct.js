@@ -1,10 +1,55 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const AddProduct = () => {
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+
+    const imageStorageKey = '08fc39b4d29c53e61c3334ccd7e75bbe';
+
     const onSubmit = data => {
-        console.log(data);
+        const image = data.image[0];
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.success) {
+                    const img = result.data.url;
+                    const product = {
+                        name: data.name,
+                        image: img,
+                        description: data.description,
+                        price: data.price,
+                        quantity: data.quantity
+                    }
+                    // send to your database 
+                    fetch('http://localhost:5000/tools', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json',
+                            authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                        },
+                        body: JSON.stringify(product)
+                    })
+                        .then(res => res.json())
+                        .then(inserted => {
+                            if (inserted.insertedId) {
+                                toast.success('Products added successfully!')
+                                reset();
+                            }
+                            else {
+                                toast.error('Failed to add product!');
+                            }
+                        })
+
+                }
+
+            })
     }
     return (
         <div className="hero">
