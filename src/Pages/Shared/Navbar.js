@@ -28,6 +28,7 @@ const Navbar = () => {
                             <li><NavLink to='/'>Home</NavLink></li>
                             <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
                             <li><NavLink to='/blogs'>Blogs</NavLink></li>
+                            <li><NavLink to='/portfolio'>Portfolio</NavLink></li>
                         </ul>
                     </div>
                     <Link to='/' className="w-24">
@@ -39,6 +40,7 @@ const Navbar = () => {
                         <li><NavLink to='/'>Home</NavLink></li>
                         <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
                         <li><NavLink to='/blogs'>Blogs</NavLink></li>
+                        <li><NavLink to='/portfolio'>Portfolio</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
