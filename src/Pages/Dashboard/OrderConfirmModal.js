@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const OrderConfirmModal = ({ deletingOrder, refetch, setDeletingOrder }) => {
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/order/${id}`;
+        const url = `https://warm-badlands-89988.herokuapp.com/order/${id}`;
         fetch(url, {
             method: 'DELETE',
             headers: {

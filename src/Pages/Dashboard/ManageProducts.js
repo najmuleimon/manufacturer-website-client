@@ -7,7 +7,7 @@ import ProductConfirmModal from './ProductConfirmModal';
 const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
 
-    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('http://localhost:5000/tools', {
+    const { data: products, isLoading, refetch } = useQuery('orders', () => fetch('https://warm-badlands-89988.herokuapp.com/tools', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }

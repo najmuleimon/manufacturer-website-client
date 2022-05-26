@@ -28,7 +28,7 @@ const AddProduct = () => {
                         quantity: data.quantity
                     }
                     // send to your database 
-                    fetch('http://localhost:5000/tools', {
+                    fetch('https://warm-badlands-89988.herokuapp.com/tools', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

@@ -10,7 +10,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth);
     const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
-    const { data: singleUser, isLoading, refetch } = useQuery('user', () => fetch(`http://localhost:5000/user/${user.email}`, {
+    const { data: singleUser, isLoading, refetch } = useQuery('user', () => fetch(`https://warm-badlands-89988.herokuapp.com/user/${user.email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -44,7 +44,7 @@ const MyProfile = () => {
                         link: data.profile
                     }
                     // send to your database 
-                    fetch(`http://localhost:5000/user/${singleUser.email}`, {
+                    fetch(`https://warm-badlands-89988.herokuapp.com/user/${singleUser.email}`, {
                         method: 'PUT',
                         headers: {
                             'content-type': 'application/json',

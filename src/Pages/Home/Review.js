@@ -5,7 +5,7 @@ const Review = ({ feedback }) => {
     const { customer, review, rating, email } = feedback;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://warm-badlands-89988.herokuapp.com/user/${email}`, {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

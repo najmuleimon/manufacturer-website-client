@@ -27,7 +27,7 @@ const AddReview = () => {
             review: event.target.review.value
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://warm-badlands-89988.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

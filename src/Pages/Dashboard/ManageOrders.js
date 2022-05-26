@@ -6,7 +6,7 @@ import OrderConfirmModal from './OrderConfirmModal';
 
 const ManageOrders = () => {
     const [deletingOrder, setDeletingOrder] = useState(null);
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch('http://localhost:5000/orders', {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch('https://warm-badlands-89988.herokuapp.com/orders', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -18,7 +18,7 @@ const ManageOrders = () => {
     }
 
     const handleApprove = id => {
-        fetch(`http://localhost:5000/shipped/${id}`, {
+        fetch(`https://warm-badlands-89988.herokuapp.com/shipped/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json',

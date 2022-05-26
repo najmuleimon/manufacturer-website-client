@@ -18,7 +18,7 @@ const Purchase = () => {
     }
 
     useEffect(() => {
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://warm-badlands-89988.herokuapp.com/tools/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setTools(data))
@@ -58,7 +58,7 @@ const Purchase = () => {
             price: totalPrice,
         }
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://warm-badlands-89988.herokuapp.com/order', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -79,7 +79,7 @@ const Purchase = () => {
         setTools({ ...tools, quantity: newQuantity })
 
 
-        const url = `http://localhost:5000/tools/${id}`;
+        const url = `https://warm-badlands-89988.herokuapp.com/tools/${id}`;
         console.log(url);
         fetch(url, {
             method: 'PUT',
