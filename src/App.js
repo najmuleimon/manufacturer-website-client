@@ -42,7 +42,7 @@ function App() {
           <Route path="add-product" element={<PrivateAdminRoute><AddProduct /></PrivateAdminRoute>}></Route>
           <Route path="manage-products" element={<PrivateAdminRoute><ManageProducts /></PrivateAdminRoute>}></Route>
         </Route>
-        <Route path='purchase/:id' element={<Purchase />} />
+        <Route path='purchase/:id' element={<PrivateRoute><Purchase /></PrivateRoute>} />
         <Route path='blogs' element={<Blogs />} />
         <Route path='portfolio' element={<MyPortfolio />} />
         <Route path='*' element={<NotFound />} />
