@@ -12,7 +12,7 @@ const Reviews = () => {
             .then(data => setReviews(data));
     }, [])
     return (
-        <section className='container max-w-7xl'>
+        <section className='container max-w-7xl py-20'>
             <div className='mb-10 text-center'>
                 <h4 className="text-4xl text-primary font-bold">Customer Reviews</h4>
                 <h2 className='text-xl font-normal'>What our customers say?</h2>

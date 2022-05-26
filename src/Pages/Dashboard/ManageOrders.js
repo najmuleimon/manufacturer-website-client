@@ -37,6 +37,7 @@ const ManageOrders = () => {
     }
     return (
         <div>
+            <h1 className='text-xl font-semibold text-primary mb-5'>Manage all Orders</h1>
             <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     <thead>

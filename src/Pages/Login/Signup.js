@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loader from '../Shared/Loader';
@@ -17,14 +18,10 @@ const Signup = () => {
     const navigate = useNavigate();
     let signUpError, googleSignUpError;
 
-    const onSubmit = async data => {
-        await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName: data.name });
-    };
-
     useEffect(() => {
         if (token) {
             navigate('/');
+            toast.success("Account created Successfully!");
         }
     }, [token, navigate]);
 
@@ -37,8 +34,13 @@ const Signup = () => {
         googleSignUpError = <p className='text-sm font-normal text-red-500'>{googleError?.message}</p>
     }
 
+    const onSubmit = async data => {
+        await createUserWithEmailAndPassword(data.email, data.password);
+        await updateProfile({ displayName: data.name });
+    };
+
     return (
-        <div className="w-full flex items-center justify-center h-screen">
+        <div className="w-full flex items-center justify-center my-16 xl:my-0" style={{ height: 'calc(100vh - 64px)' }}>
             <div className="card w-full max-w-lg shadow-xl bg-base-100">
                 <div className="card-body">
 

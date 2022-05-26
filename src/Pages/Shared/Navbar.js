@@ -1,12 +1,13 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import auth from '../../firebase.init';
 import Loader from './Loader';
 
 const Navbar = () => {
+    const { pathname } = useLocation();
     const [user, loading, error] = useAuthState(auth);
     if (loading) {
         <Loader />
@@ -17,7 +18,7 @@ const Navbar = () => {
         localStorage.removeItem('accessToken');
     };
     return (
-        <div className="container max-w-7xl">
+        <div className="container max-w-7xl sticky top-0 z-50 w-full">
             <div className="navbar bg-base-100 ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -48,11 +49,13 @@ const Navbar = () => {
                         user ? <button onClick={logout} className="btn">Logout</button> : <Link to='/login' className="btn">Login</Link>
                     }
                 </div>
-                <label htmlFor="dashboard-drawer" className="btn btn-ghost drawer-button lg:hidden ml-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </label>
+                {pathname.includes("dashboard") &&
+                    <label htmlFor="dashboard-drawer" className="btn btn-ghost drawer-button lg:hidden ml-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </label>
+                }
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import useToken from '../../hooks/useToken';
 import Loader from '../Shared/Loader';
@@ -19,6 +20,7 @@ const Login = () => {
     useEffect(() => {
         if (token) {
             navigate(from, { replace: true });
+            toast.success("Logged In Successfully!");
         }
     }, [token, navigate, from])
 
@@ -36,7 +38,7 @@ const Login = () => {
     };
 
     return (
-        <div className="w-full flex items-center justify-center h-screen">
+        <div className="w-full flex items-center justify-center my-16 xl:my-0" style={{ height: 'calc(100vh - 64px)' }}>
             <div className="card w-full max-w-lg shadow-xl bg-base-100">
                 <div className="card-body">
                     {/* title */}

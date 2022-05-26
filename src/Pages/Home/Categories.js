@@ -16,8 +16,8 @@ const Categories = () => {
             <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 <div className="flex items-center border border-gray-200 rounded-xl p-6">
                     <div className="flex-1">
-                        <h3>Machine tools</h3>
-                        <p>All Machineries</p>
+                        <h3 className='text-xl text-primary font-medium'>Machine tools</h3>
+                        <p className='text-sm font-normal'>All Machineries</p>
                     </div>
                     <div className="flex-1">
                         <img className='w-full' src={cat1} alt="" />
@@ -25,8 +25,8 @@ const Categories = () => {
                 </div>
                 <div className="flex items-center border border-gray-200 rounded-xl p-6">
                     <div className="flex-1">
-                        <h3>Electric Tools</h3>
-                        <p>All Electric tools</p>
+                        <h3 className='text-xl text-primary font-medium'>Electric Tools</h3>
+                        <p className='text-sm font-normal'>All Electric tools</p>
                     </div>
                     <div className="flex-1">
                         <img className='w-full' src={cat2} alt="" />
@@ -34,8 +34,8 @@ const Categories = () => {
                 </div>
                 <div className="flex items-center border border-gray-200 rounded-xl p-6">
                     <div className="flex-1">
-                        <h3>Power Tools</h3>
-                        <p>Drill Machines</p>
+                        <h3 className='text-xl text-primary font-medium'>Power Tools</h3>
+                        <p className='text-sm font-normal'>Drill Machines</p>
                     </div>
                     <div className="flex-1">
                         <img className='w-full' src={cat3} alt="" />
@@ -43,8 +43,8 @@ const Categories = () => {
                 </div>
                 <div className="flex items-center border border-gray-200 rounded-xl p-6">
                     <div className="flex-1">
-                        <h3>Hand Tools</h3>
-                        <p>Hand Machine tools</p>
+                        <h3 className='text-xl text-primary font-medium'>Hand Tools</h3>
+                        <p className='text-sm font-normal'>Hand Machine tools</p>
                     </div>
                     <div className="flex-1">
                         <img className='w-full' src={cat4} alt="" />
@@ -52,8 +52,8 @@ const Categories = () => {
                 </div>
                 <div className="flex items-center border border-gray-200 rounded-xl p-6">
                     <div className="flex-1">
-                        <h3>Wireless Tools</h3>
-                        <p>Wireless Machineries</p>
+                        <h3 className='text-xl text-primary font-medium'>Wireless Tools</h3>
+                        <p className='text-sm font-normal'>Wireless Machineries</p>
                     </div>
                     <div className="flex-1">
                         <img className='w-full' src={cat5} alt="" />
@@ -61,8 +61,8 @@ const Categories = () => {
                 </div>
                 <div className="flex items-center border border-gray-200 rounded-xl p-6">
                     <div className="flex-1">
-                        <h3>Welding tools</h3>
-                        <p>Welding Machineries</p>
+                        <h3 className='text-xl text-primary font-medium'>Welding tools</h3>
+                        <p className='text-sm font-normal'>Welding Machineries</p>
                     </div>
                     <div className="flex-1">
                         <img className='w-full' src={cat7} alt="" />

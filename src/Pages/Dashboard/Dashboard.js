@@ -12,7 +12,7 @@ const Dashboard = () => {
             <input id="dashboard-drawer" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content p-5">
 
-                <h1>Dashboard</h1>
+                <h1 className='text-xl text-primary font-semibold mb-10 capitalize bg-base-100 shadow-sm p-4 rounded-xl'>Dashboard</h1>
                 <Outlet />
             </div>
             <div className="drawer-side">

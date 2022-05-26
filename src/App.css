@@ -1,4 +1,7 @@
 * {
     font-family: 'Poppins', sans-serif;
-    /*ff6a00*/
+}
+
+html {
+    scroll-behavior: smooth;
 }

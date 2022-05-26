@@ -10,7 +10,7 @@ const Tools = () => {
             .then(data => setTools(data))
     }, [])
     return (
-        <section className='container max-w-7xl py-20'>
+        <section className='container max-w-7xl py-20' id='tools'>
             <div className='mb-10 text-center'>
                 <h4 className="text-4xl text-primary font-bold">Tools</h4>
                 <h2 className='text-xl font-normal'>Electronic Tools</h2>

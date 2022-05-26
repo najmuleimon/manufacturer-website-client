@@ -9,7 +9,7 @@ const BusinessSummary = () => {
     return (
         <section style={{ background: `url(${business})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundAttachment: 'fixed', backgroundSize: 'cover' }}>
             <div className="container max-w-7xl">
-                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-20'>
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 gap-y-10 md:gap-y-5 py-20'>
                     <div className="text-white text-center">
                         <HiOutlineEmojiHappy className='text-6xl text-primary mx-auto' />
                         <h2 className='text-4xl font-medium py-5'>100+</h2>

@@ -41,40 +41,39 @@ const AddReview = () => {
     }
 
     return (
-        <div className="hero">
-            <div className="hero-content">
-                <div className="card w-full shadow-2xl bg-base-100">
-                    <div className="card-body">
-                        <form onSubmit={handleReview}>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" placeholder="Your name" disabled value={user?.displayName} className="input input-bordered input-md w-full max-w-xs" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input type="email" placeholder="Email address" disabled value={user?.email} className="input input-bordered input-md w-full max-w-xs" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Rating (from 1 to 5)</span>
-                                </label>
-                                <input onChange={handleRating} type="number" required placeholder="Rating" name="rating" className="input input-bordered input-md w-full max-w-xs" />
-                                {ratingError && <p className='text-sm text-red-500 font-normal'>{ratingError}</p>}
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Review</span>
-                                </label>
-                                <textarea placeholder="Review" name="review" required className="input input-bordered input-md w-full max-w-xs" ></textarea>
-                            </div>
+        <div>
+            <h1 className='text-xl font-semibold text-primary mb-5'>Add a Review</h1>
+            <div className="card w-full shadow-2xl bg-base-100">
+                <div className="card-body">
+                    <form onSubmit={handleReview}>
+                        <div className="form-control mb-5">
+                            <label className="label">
+                                <span className="label-text">Name</span>
+                            </label>
+                            <input type="text" placeholder="Your name" disabled value={user?.displayName} className="input input-bordered input-md w-full" />
+                        </div>
+                        <div className="form-control mb-5">
+                            <label className="label">
+                                <span className="label-text">Email</span>
+                            </label>
+                            <input type="email" placeholder="Email address" disabled value={user?.email} className="input input-bordered input-md w-full" />
+                        </div>
+                        <div className="form-control mb-5">
+                            <label className="label">
+                                <span className="label-text">Rating (from 1 to 5)</span>
+                            </label>
+                            <input onChange={handleRating} type="number" required placeholder="Rating" name="rating" className="input input-bordered input-md w-full" />
+                            {ratingError && <p className='text-sm text-red-500 font-normal'>{ratingError}</p>}
+                        </div>
+                        <div className="form-control mb-5">
+                            <label className="label">
+                                <span className="label-text">Review</span>
+                            </label>
+                            <textarea placeholder="Review" name="review" required className="input input-bordered input-md w-full" ></textarea>
+                        </div>
 
-                            <button type='submit' className='btn btn-primary'>Submit</button>
-                        </form>
-                    </div>
+                        <button type='submit' className='btn btn-primary'>Submit</button>
+                    </form>
                 </div>
             </div>
         </div>

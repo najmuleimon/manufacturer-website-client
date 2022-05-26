@@ -15,21 +15,25 @@ const Users = () => {
         return <Loader />
     }
     return (
-        <div className="overflow-x-auto">
-            <table className="table table-zebra w-full">
-                <thead>
-                    <tr>
-                        <th>Serial</th>
-                        <th>Email</th>
-                        <th>Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        users.map((user, index) => <UserRow key={user._id} user={user} index={index} refetch={refetch}></UserRow>)
-                    }
-                </tbody>
-            </table>
+        <div>
+            <h1 className='text-xl font-semibold text-primary mb-5'>Make Admin</h1>
+
+            <div className="overflow-x-auto">
+                <table className="table table-zebra w-full">
+                    <thead>
+                        <tr>
+                            <th>Serial</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            users.map((user, index) => <UserRow key={user._id} user={user} index={index} refetch={refetch}></UserRow>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

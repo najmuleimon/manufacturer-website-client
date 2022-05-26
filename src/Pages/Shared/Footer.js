@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const date = new Date();
@@ -15,8 +16,8 @@ const Footer = () => {
                 </div>
                 <div>
                     <span className="footer-title">Information</span>
-                    <button className="link link-hover">About Us</button>
-                    <button className="link link-hover">Blogs</button>
+                    <Link to='/portfolio' className="link link-hover">Portfolio</Link>
+                    <Link to='/blogs' className="link link-hover">Blogs</Link>
                     <button className="link link-hover">Reviews</button>
                     <button className="link link-hover">Contact</button>
                 </div>
@@ -27,7 +28,7 @@ const Footer = () => {
             </div>
 
             <div className="footer footer-center p-4 text-base-100">
-                <p>Copyright © {year} - All right reserve</p>
+                <p>Copyright © {year} - All right reserve by Jontro</p>
             </div>
         </footer>
 

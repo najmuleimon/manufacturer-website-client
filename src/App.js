@@ -31,9 +31,9 @@ function App() {
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
         <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>
+          <Route path="profile" element={<MyProfile />}></Route>
           <Route path="my-orders" element={<MyOrders />}></Route>
           <Route path="add-review" element={<AddReview />}></Route>
-          <Route path="profile" element={<MyProfile />}></Route>
           <Route path="payment/:id" element={<Payment />}></Route>
           <Route path="users" element={<PrivateAdminRoute><Users /></PrivateAdminRoute>}></Route>
           <Route path="manage-orders" element={<PrivateAdminRoute><ManageOrders /></PrivateAdminRoute>}></Route>

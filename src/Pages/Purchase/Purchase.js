@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Footer from '../Shared/Footer';
 import Loader from '../Shared/Loader';
 
 const Purchase = () => {
@@ -88,55 +89,65 @@ const Purchase = () => {
     }
 
     return (
-        <div className='container max-w-7xl'>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img src={tools.image} alt="Album" /></figure>
-                <div className="card-body">
-                    <h2 className="card-title">{tools.name}</h2>
-                    <h4>{tools.description}</h4>
-                    <h4>minimum order quantity: 100</h4>
-                    <h4>available quantity: {tools.quantity}</h4>
-                    <h4>price: {tools.price}</h4>
+        <div>
+            <div className='container max-w-7xl py-20'>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                    <div className="card bg-base-100 shadow-xl">
+                        <figure className='max-w-sm mx-auto'><img className='w-full' src={tools.image} alt="Album" /></figure>
+                        <div className="card-body">
+                            <h2 className="card-title">{tools.name}</h2>
+                            <h4>{tools.description}</h4>
+                            <h4>minimum order quantity: 100</h4>
+                            <h4>available quantity: {tools.quantity}</h4>
+                            <h4>price: {tools.price}</h4>
+                        </div>
+                    </div>
+
+                    <div className="card bg-base-100 shadow-xl">
+                        <div className="card-body">
+                            <h1 className='text-xl font-semibold text-primary mb-5'>Buy this Product</h1>
+                            <form onSubmit={handlePurchase}>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Name</span>
+                                    </label>
+                                    <input type="text" placeholder="Your name" disabled value={user?.displayName} className="input input-bordered input-md w-full" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Email</span>
+                                    </label>
+                                    <input type="email" placeholder="Email address" disabled value={user?.email} className="input input-bordered input-md w-full" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Address</span>
+                                    </label>
+                                    <input type="text" placeholder="Address" name="address" className="input input-bordered input-md w-full" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Phone</span>
+                                    </label>
+                                    <input type="tel" placeholder="Phone number" name="phone" className="input input-bordered input-md w-full" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Product quantity</span>
+                                    </label>
+                                    <input type="text" placeholder="Quantity" name="quantity" onChange={handleQuantity} value={purchaseQuantity} className="input input-bordered input-md w-full" />
+                                    <label className="label">
+                                        <p className='text-sm font-normal text-red-500'>{quantityError}</p>
+                                    </label>
+                                </div>
+
+                                <button type='submit' className='btn btn-primary' disabled={purchaseQuantity < 100 || purchaseQuantity > tools.quantity}>Purchase</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <form onSubmit={handlePurchase}>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Name</span>
-                    </label>
-                    <input type="text" placeholder="Your name" disabled value={user?.displayName} className="input input-bordered input-md w-full max-w-xs" />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Email</span>
-                    </label>
-                    <input type="email" placeholder="Email address" disabled value={user?.email} className="input input-bordered input-md w-full max-w-xs" />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Address</span>
-                    </label>
-                    <input type="text" placeholder="Address" name="address" className="input input-bordered input-md w-full max-w-xs" />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Phone</span>
-                    </label>
-                    <input type="tel" placeholder="Phone number" name="phone" className="input input-bordered input-md w-full max-w-xs" />
-                </div>
-                <div className="form-control">
-                    <label className="label">
-                        <span className="label-text">Product quantity</span>
-                    </label>
-                    <input type="text" placeholder="Quantity" name="quantity" onChange={handleQuantity} value={purchaseQuantity} className="input input-bordered input-md w-full max-w-xs" />
-                    <label className="label">
-                        <p className='text-sm font-normal text-red-500'>{quantityError}</p>
-                    </label>
-                </div>
-
-                <button type='submit' className='btn btn-primary' disabled={purchaseQuantity < 100 || purchaseQuantity > tools.quantity}>Purchase</button>
-            </form>
+            <Footer />
         </div>
     );
 };
