@@ -8,7 +8,7 @@ import cat7 from '../../assets/images/cat7.jpg';
 
 const Categories = () => {
     return (
-        <section className='container max-w-7xl'>
+        <section className='container max-w-7xl py-20'>
             <div className='mb-10 text-center'>
                 <h4 className="text-4xl text-primary font-bold">Categories</h4>
                 <h2 className='text-xl font-normal'>Tools category</h2>
