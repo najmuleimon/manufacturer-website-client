@@ -92,7 +92,7 @@ const AddProduct = () => {
                             <label className="label">
                                 <span className="label-text">Product Quantity</span>
                             </label>
-                            <input type="number" placeholder="Password" className="input input-bordered"
+                            <input type="number" placeholder="Quantity" className="input input-bordered"
                                 {...register("quantity", {
                                     required: {
                                         value: true,

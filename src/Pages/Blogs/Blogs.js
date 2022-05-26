@@ -5,6 +5,10 @@ const Blogs = () => {
     return (
         <div>
             <div className='container max-w-7xl py-20'>
+                <div className='mb-10 text-center'>
+                    <h4 className="text-4xl text-primary font-bold">Blogs</h4>
+                    <h2 className='text-xl font-normal'>Our Blogs</h2>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                     <div className="card w-full bg-base-100 shadow-xl">
                         <div className="card-body">

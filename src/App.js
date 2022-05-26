@@ -21,6 +21,7 @@ import AddProduct from './Pages/Dashboard/AddProduct';
 import PrivateAdminRoute from './Pages/Login/PrivateAdminRoute';
 import Payment from './Pages/Dashboard/Payment';
 import MyPortfolio from './Pages/Portfolio/MyPortfolio';
+import DashboardConsole from './Pages/Dashboard/DashboardConsole';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
         <Route path='dashboard' element={<PrivateRoute><Dashboard /></PrivateRoute>}>
+          <Route index element={<DashboardConsole />}></Route>
           <Route path="profile" element={<MyProfile />}></Route>
           <Route path="my-orders" element={<MyOrders />}></Route>
           <Route path="add-review" element={<AddReview />}></Route>

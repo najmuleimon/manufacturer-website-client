@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Footer from '../Shared/Footer';
 import Loader from '../Shared/Loader';
@@ -66,7 +67,12 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                if (data.success) {
+                    toast.success("Order placed Successfully!");
+                }
+                else {
+                    toast.error("Sorry! Try again!")
+                }
             });
 
 
@@ -96,10 +102,10 @@ const Purchase = () => {
                         <figure className='max-w-sm mx-auto'><img className='w-full' src={tools.image} alt="Album" /></figure>
                         <div className="card-body">
                             <h2 className="card-title">{tools.name}</h2>
-                            <h4>{tools.description}</h4>
-                            <h4>minimum order quantity: 100</h4>
-                            <h4>available quantity: {tools.quantity}</h4>
-                            <h4>price: {tools.price}</h4>
+                            <p>{tools.description}</p>
+                            <h4 className='text-lg font-semibold'>Minimum order quantity: 100</h4>
+                            <h4 className='text-lg font-semibold'>Available quantity: {tools.quantity}</h4>
+                            <h4 className='text-xl text-primary font-semibold'>Price: {tools.price}</h4>
                         </div>
                     </div>
 

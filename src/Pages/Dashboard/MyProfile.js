@@ -179,9 +179,7 @@ const MyProfile = () => {
                         {singleUser.link && <p className='text-base font-medium'>Linkedin Profile: {singleUser.link}</p>}
                         <div className="flex items-center w-fit">
                             <p className='text-base font-medium'>User Image: </p>
-                            <div className="h-16 w-16 rounded-full overflow-hidden ml-10">
-                                {singleUser.image && <img src={singleUser.image} className="w-full" alt="" />}
-                            </div>
+                            {singleUser.image ? <img src={singleUser.image} className="h-16 w-16 rounded-full overflow-hidden ml-10" alt="" /> : <p className='text-base font-medium pl-2'> No Image Found</p>}
                         </div>
                     </div>
                 </div>

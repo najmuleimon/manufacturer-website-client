@@ -29,6 +29,7 @@ const ManageOrders = () => {
             .then(data => {
                 if (data.acknowledged) {
                     toast.success('Products shipped successfully!');
+                    refetch();
                 }
                 else {
                     toast.error('Failed to shipped!')

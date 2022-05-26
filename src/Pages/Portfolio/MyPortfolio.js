@@ -5,9 +5,12 @@ const MyPortfolio = () => {
     return (
         <div>
             <div className='container max-w-7xl py-20'>
+                <div className='mb-10 text-center'>
+                    <h4 className="text-4xl text-primary font-bold">Portfolio</h4>
+                    <h2 className='text-xl font-normal'>My Portfolio</h2>
+                </div>
                 <div className="card w-full bg-base-100 shadow-xl">
                     <div className="card-body">
-                        <h1 className='text-xl font-semibold text-primary mb-5'>My Portfolio</h1>
                         <div className="shadow rounded-lg p-4 mb-5">
                             <h3 className='text-lg font-semibold text-primary'><span className='text-neutral'>Name:</span> Md. Najmul Huda Eimon</h3>
                             <h3 className='text-lg font-semibold text-primary'><span className='text-neutral'>Email address:</span> najmul.eimon@gmail.com</h3>
